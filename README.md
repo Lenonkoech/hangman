@@ -39,7 +39,7 @@ A modern implementation of the classic Hangman word-guessing game built with Rea
 
 1. Clone the repository:
 ```bash
-git clone [repository-url]
+git clone https://github.com/Lenonkoech/hangman
 cd hangman
 ```
 
