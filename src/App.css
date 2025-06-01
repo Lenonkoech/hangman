@@ -1,0 +1,184 @@
+.card {
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin: 0 auto;
+  align-items: center;
+}
+
+.display-banner {
+  font-size: 1rem;
+  text-align: center;
+}
+
+/* Background Modes */
+.white-bg {
+  background-color: white;
+  color: black;
+  /* Hangman will be black */
+}
+
+.black-bg {
+  background-color: black;
+  color: white;
+  /* Hangman will be white */
+}
+
+/* Centering and sizing */
+.hangman-container {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+/* Use currentColor so it adapts to .white-bg or .black-bg */
+.gallow-base,
+.gallow-vertical,
+.gallow-top,
+.gallow-rope,
+.head,
+.body,
+.left-arm,
+.right-arm,
+.left-leg,
+.right-leg {
+  background: currentColor;
+  border-color: currentColor;
+}
+
+.head {
+  position: absolute;
+  top: 50px;
+  left: 113px;
+  width: 35px;
+  height: 35px;
+  border: 3px solid currentColor;
+  border-radius: 50%;
+}
+
+.body {
+  position: absolute;
+  top: 88px;
+  left: 129px;
+  width: 3px;
+  height: 60px;
+  background: currentColor;
+}
+
+.left-arm {
+  position: absolute;
+  top: 100px;
+  left: 129px;
+  width: 30px;
+  height: 3px;
+  background: currentColor;
+  transform: rotate(-30deg);
+  transform-origin: left center;
+}
+
+.right-arm {
+  position: absolute;
+  top: 100px;
+  left: 102px;
+  width: 30px;
+  height: 3px;
+  background: currentColor;
+  transform: rotate(40deg);
+  transform-origin: right center;
+}
+
+.left-leg {
+  position: absolute;
+  top: 144px;
+  left: 129px;
+  width: 30px;
+  height: 3px;
+  background: currentColor;
+  transform: rotate(45deg);
+  transform-origin: left center;
+}
+
+.right-leg {
+  position: absolute;
+  top: 144px;
+  left: 102px;
+  width: 30px;
+  height: 3px;
+  background: currentColor;
+  transform: rotate(-45deg);
+  transform-origin: right center;
+}
+
+.gallow-base {
+  position: absolute;
+  bottom: 50px;
+  width: 120px;
+  height: 10px;
+  left: 0;
+}
+
+.gallow-vertical {
+  position: absolute;
+  left: 40px;
+  bottom: 60px;
+  width: 10px;
+  height: 250px;
+}
+
+.gallow-top {
+  position: absolute;
+  top: 0;
+  left: 40px;
+  width: 100px;
+  height: 10px;
+}
+
+.gallow-rope {
+  position: absolute;
+  top: 10px;
+  left: 130px;
+  width: 2px;
+  height: 40px;
+}
+
+/* Hangman words */
+.hangman-word {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  font-size: 2rem;
+  font-family: monospace;
+  margin-top: -20px;
+}
+
+.letter {
+  border-bottom: 2px solid #444;
+  width: 30px;
+  text-align: center;
+}
+
+.refresh-button {
+  margin-top: -10px;
+  padding: 10px;
+  background-color: #444;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.refresh-button:hover {
+  background-color: #666;
+}
+
+.refresh-button svg {
+  fill: white;
+}
